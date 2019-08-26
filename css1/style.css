@@ -1,0 +1,200 @@
+*{ 
+  cursor: url("../images/1.png"), auto;
+  position: relative;
+}
+
+body {
+  color: black;
+  list-style-type: none;
+  white-space: nowrap; 
+  font-family: 'Noto Serif KR', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+   user-select: none; /* Non-prefixed version, currently
+   supported by Chrome and Opera */
+ }
+
+ div{
+  position: fixed;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.help{
+  animation: blink 2s linear infinite;
+  bottom: 30px;
+  cursor: pointer;
+  left: 50%;
+  transform: translateX(-50%);
+}  
+
+.help:hover{
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  color: red;
+}
+
+#counter{
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  50%{opacity: .5;}
+  100%{opacity: 1;}
+}
+
+.start{
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  cursor: pointer;
+}
+
+#btn{
+  position: fixed;
+  bottom: 25px;
+  left: 30px;
+  border: none;
+  color: black;
+  text-decoration: none;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.sidenav {
+  position: fixed;
+  width: 0px;
+  height: 0%;
+  z-index: 1;
+  bottom:0;
+  right: 0;
+  padding-bottom: 60px;
+  background-color: none;
+  overflow-x: hidden;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.sidenav a {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.closebtn {
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  bottom: 20px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+p.a, p.b, p.c, p.d, p.e, p.f,
+p.g, p.h, p.i, p.j, p.k, p.l,
+p.m, p.n, p.o, p.p, p.h, p.i,
+p.j, p.k, p.l, p.m, p.n, p.o, 
+p.p, p.q, p.r, p.s, p.t, p.u,
+p.v, p.w, p.x, p.y, p.z{
+  position:fixed;   
+}
+
+p:hover{
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  color:red;
+}
+
+.bomb:active,
+.stopwatch:active,
+.pistol:active,
+.firecracker:active,
+.warning:active {
+  transform: translateY(7px);
+  cursor: pointer;
+}
+
+.bomb-effect{
+  width: 100%;
+  height: 100%;
+  animation-name: boom;
+  animation-duration: 2s; 
+  animation-iteration-count: 1; /*반복하고 싶은 횟수 입력 또는 infinite*/
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; 
+}
+
+@keyframes boom{
+  0%{background-color: none;}
+  30%{background-colr: black;}
+  90%{background-color: black;}
+  100%{background-color: white;}
+}
+
+.pistol-effect{
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.firecracker-effect{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  animation-name: go; /*원하는 이름 임의로 설정하면 됨*/
+  animation-duration: 3s; 
+  animation-iteration-count: 1; /*반복하고 싶은 횟수 입력 또는 infinite*/
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards; /*애니메이션 실행이 끝난 상태에 멈춰있도록 하려면 forwards;를 입력한다.(이때 infinite면 안됨. 아니면 none;) */
+}
+
+.warning-effect{
+  color:red;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: 7;
+}
+
+
+@keyframes go{
+  0%{background-color: white;}
+  30%{background-color: yellow;}
+  45%{background-color: orange;}
+  90%{background-color: red;}
+  100%{background-color: white;}
+}
+
+@media screen and (max-width: 600px) {
+  body{
+    font-size: 1.3rem;
+    font-weight: 200;
+  }
+
+  .sidenav {
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 110px;
+    /*display: flex;*/
+    align-items: center;
+    justify-content: center;
+    /*vertical-align: middle;*/
+  }
+
+  .closebtn {
+    bottom: 70px;
+    right: 15px;
+  }
+}
