@@ -49,12 +49,12 @@
   }
 
 
-  var aAudio = new Audio('assets/sound/bomb.mp3');
-  var bAudio = new Audio('assets/sound/stopwatch.mp3');
-  var cAudio = new Audio('assets/sound/swish.mp3');
-  var dAudio = new Audio('assets/sound/firecracker.mp3');
-  var eAudio = new Audio('assets/sound/warning.mp3');
-  var fAudio = new Audio('assets/sound/pistol.mp3');
+  var aAudio = new Audio('sound1/bomb.mp3');
+  var bAudio = new Audio('sound1/stopwatch.mp3');
+  var cAudio = new Audio('sound1/swish.mp3');
+  var dAudio = new Audio('sound1/firecracker.mp3');
+  var eAudio = new Audio('sound1/warning.mp3');
+  var fAudio = new Audio('sound1/pistol.mp3');
   
   function myAudioFunction(letter) {
     if(letter == 'click'){
